@@ -138,7 +138,7 @@ def restoreTerminalSettings(old_settings):
 if __name__=="__main__":
     settings = saveTerminalSettings()
 
-    rospy.init_node('teleop_arm_keyboard')
+    rospy.init_node('teleop_arm_control')
 
 
 
