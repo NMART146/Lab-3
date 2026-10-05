@@ -13,6 +13,9 @@ class ArmControl(Node):
     
     board = Board()
 
+
+    def listener_callback(self, ForwardMsg)
+        
     # TODO: Write an arm_control node to receive joint angles
     # and send messages to the Board.
 
