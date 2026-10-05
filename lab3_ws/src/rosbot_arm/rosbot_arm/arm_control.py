@@ -7,14 +7,16 @@ class ArmControl(Node):
     def __init__(self):
         super().__init__('arm_control')
         # TODO: Subscribe to a forward control topic
-        self.subscription = self.create_subscription(ForwardMsg,'forward_topic',)
+        self.subscription = self.create_subscription(ForwardMsg,'forward_topic',self.listener_callback,10)
         # TODO: Subscribe to a gripper control topic
-        self.subscription = self.create_subscription(,'gripControl',)
+        self.subscription = self.create_subscription(,'gripControl',self.listener_callback,10)
     
     board = Board()
 
 
-    def listener_callback(self, ForwardMsg)
+    def listener_callback(self, msg)
+        servo_id = msg.servo_id
+        command_pulse = msg.command_pulse
         
     # TODO: Write an arm_control node to receive joint angles
     # and send messages to the Board.
