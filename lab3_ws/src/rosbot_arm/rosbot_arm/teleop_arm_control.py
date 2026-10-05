@@ -6,7 +6,7 @@ from ros_robot_controller.ros_robot_controller_sdk import Board
 
 import threading
 
-import rospy
+import rclpy
 
 
 from rosbot_msgs.msg import ForwardMsg
@@ -61,7 +61,7 @@ class PublishThread(threading.Thread):
     def __init__(self, rate):
         super(PublishThread, self).__init__()
         
-        self.publisher = rospy.Publisher('forward_topic', ForwardMsg, queue_size = 1)
+        self.publisher = rclpy.Publisher('forward_topic', ForwardMsg, queue_size = 1)
         # Set timeout to None if rate is 0 (causes new_message to wait forever
         # for new data to publish)
         if rate != 0.0:
@@ -73,13 +73,13 @@ class PublishThread(threading.Thread):
 
     def wait_for_subscribers(self):
         i = 0
-        while not rospy.is_shutdown() and self.publisher.get_num_connections() == 0:
+        while not rclpy.is_shutdown() and self.publisher.get_num_connections() == 0:
             if i == 4:
                 print("Waiting for subscriber to connect to {}".format(self.publisher.name))
-            rospy.sleep(0.5)
+            rclpy.sleep(0.5)
             i += 1
             i = i % 5
-        if rospy.is_shutdown():
+        if rclpy.is_shutdown():
             raise Exception("Got shutdown request before subscribers connected")
 
     def update(self, targetServo, direction):
@@ -138,7 +138,7 @@ def restoreTerminalSettings(old_settings):
 if __name__=="__main__":
     settings = saveTerminalSettings()
 
-    rospy.init_node('teleop_arm_keyboard')
+    rclpy.init_node('teleop_arm_control')
 
 
 

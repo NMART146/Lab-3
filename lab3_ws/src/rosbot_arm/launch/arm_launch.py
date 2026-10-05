@@ -14,7 +14,7 @@ def generate_launch_description():
                 name='arm_control')
     
     teleop_arm_control_node = Node(
-        package='rosbot',
+        package='rosbot_arm',
         executable='teleop_arm_control',
         name='teleop_arm_control')
     
