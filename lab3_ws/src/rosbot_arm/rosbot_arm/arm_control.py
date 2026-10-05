@@ -7,8 +7,9 @@ class ArmControl(Node):
     def __init__(self):
         super().__init__('arm_control')
         # TODO: Subscribe to a forward control topic
-        self.create_subscription()
+        self.subscription = self.create_subscription(ForwardMsg,'forward_topic',)
         # TODO: Subscribe to a gripper control topic
+        self.subscription = self.create_subscription(,'gripControl',)
     
     board = Board()
 
