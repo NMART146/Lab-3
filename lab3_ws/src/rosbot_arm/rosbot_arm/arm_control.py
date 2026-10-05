@@ -21,6 +21,16 @@ class ArmControl(Node):
 
     # See arm_test for example of board functionality.
 
+# List of joint (id, command) pairs
+targets = [(1, 500), # SHOULDER YAW
+           (2, 750), # SHOUDLER HINGE KEEP JOINT 2 BETWEEN 125 AND 775
+           (3, 40), # ELBOW HINGE
+           (4, 350), # WRIST HINGE
+           (5, 500), # WRIST ROLL
+           (10, 350)] # Gripper joint. Keep below 650
+
+duration = 1.0 # Time to complete motion
+
 
 def main():
     rclpy.init()
