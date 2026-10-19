@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
- 
+from rosbot_msgs.msg import Coordinate
+from rosbot_msgs.msg import ForwardMsg
+
 import numpy as np
 
 
@@ -32,12 +34,14 @@ joints = np.array([[1,2,3,4,5],[0.0,0.0,0.0,0.0,0.0]]) #row1-joint id, row2-join
 # TODO: Write helper scripts to convert from one to the other.
 
 def angle_to_pulse(joint_id, angle):
+    joint_id -= 1
     pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
     angle_range = [min_angles[joint_id], max_angles[joint_id]]
     pulse = np.interp(angle, angle_range, pulse_range)
     return pulse
 
 def pulse_to_angle(joint_id, pulse):
+    joint_id -= 1
     pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
     angle_range = [min_angles[joint_id], max_angles[joint_id]]
     angle = np.interp(pulse, pulse_range, angle_range)
@@ -47,6 +51,12 @@ class IKNode(Node):
     def __init__(self):
         super().__init__('ik_node')
         #subscribe to coordinate topic (x,y,z,phi,gamma)
+        self.subscription = self.create_subscription(
+                    Coordinate,
+                    'coordinate_topic',
+                    self.listener_callback,
+                    10
+                )
         #publish to forward topic (servo_id, command_pulse)
         
         coordinate[2] = coordinate[2] - lengths[0] + lengths[3] #adjust for base height
@@ -67,6 +77,9 @@ class IKNode(Node):
             
         
     # TODO: Write inverse kinematics node
+
+    def listener_callback(self, msg):
+        coordinate = [msg.x, msg.y, msg.z, msg.phi, msg.gamma]
 
 def main():
     rclpy.init()

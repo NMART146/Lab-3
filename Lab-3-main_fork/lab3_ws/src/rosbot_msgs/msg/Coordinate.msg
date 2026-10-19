@@ -1,2 +1,5 @@
-int8[] servo_id
-float64[] pulse
+float64 x
+float64 y
+float64 z
+float64 phi
+float64 gamma
