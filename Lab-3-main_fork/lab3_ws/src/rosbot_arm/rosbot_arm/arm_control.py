@@ -55,9 +55,7 @@ class ArmControl(Node):
         if servo_id == 2:
             new_pulse = sanitize_input(new_pulse, 775, 125)
         elif servo_id == 3:
-            new_pulse = sanitize_input(new_pulse, 500, 30)
-        elif servo_id == 5:
-            new_pulse = sanitize_input(new_pulse, 875, 128)
+            new_pulse = sanitize_input(new_pulse, 500, 40)
         elif servo_id == 10:
             new_pulse = sanitize_input(new_pulse, 650, 0)
         else:
