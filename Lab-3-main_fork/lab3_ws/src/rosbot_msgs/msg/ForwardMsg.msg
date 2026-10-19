@@ -1,1 +1,1 @@
-int64[6] pulse_array
+int64[] pulse_array
