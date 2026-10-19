@@ -34,14 +34,12 @@ joints = np.array([[1,2,3,4,5],[0.0,0.0,0.0,0.0,0.0]]) #row1-joint id, row2-join
 # TODO: Write helper scripts to convert from one to the other.
 
 def angle_to_pulse(joint_id, angle):
-    joint_id -= 1
     pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
     angle_range = [min_angles[joint_id], max_angles[joint_id]]
     pulse = np.interp(angle, angle_range, pulse_range)
     return pulse
 
 def pulse_to_angle(joint_id, pulse):
-    joint_id -= 1
     pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
     angle_range = [min_angles[joint_id], max_angles[joint_id]]
     angle = np.interp(pulse, pulse_range, angle_range)
@@ -82,12 +80,9 @@ class IKNode(Node):
 
     def timer_callback(self):
         msg = ForwardMsg()
-        
+        msg.pulse_array = joints[1,:].tolist()
+        self.publisher_.publish(msg)
 
-
-
-        
-        
             
         
     # TODO: Write inverse kinematics node
