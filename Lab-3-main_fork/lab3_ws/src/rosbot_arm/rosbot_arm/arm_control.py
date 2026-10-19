@@ -47,7 +47,7 @@ class ArmControl(Node):
         self.current_positions[0] = sanitize_input(pulse_array[0], 1000, 0)
         self.current_positions[1] = sanitize_input(pulse_array[1], 775, 125)
         self.current_positions[2] = sanitize_input(pulse_array[2], 500, 30)
-        self.current_positions[3] = sanitize_input(pulse_array[3], 500, 500)
+        self.current_positions[3] = sanitize_input(pulse_array[3], 750, 250)
         self.current_positions[4] = sanitize_input(pulse_array[4], 875, 125)
         
         # Send to hardware (using 0.1s duration for snappy keyboard response)
