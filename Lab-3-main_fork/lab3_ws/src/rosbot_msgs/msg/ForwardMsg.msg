@@ -1,2 +1,1 @@
-int64 servo_id
-int64 command_pulse
+int64[6] pulse_array
