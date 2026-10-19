@@ -75,7 +75,7 @@ class IKNode(Node):
                 )
         #publish to forward topic (servo_id, command_pulse)
         self.publisher_ = self.create_publisher(ForwardMsg, 'forward_topic', 10)
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.timer = self.create_timer(0.5, self.timer_callback)
 
 
     def timer_callback(self):
