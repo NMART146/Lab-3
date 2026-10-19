@@ -37,7 +37,7 @@ class ArmControl(Node):
         }
         
         # Move arm to starting positions on boot
-        self.update_arm(10.0) 
+        self.update_arm(5.0) 
         self.get_logger().info("Arm initialized to starting positions.")
 
     def listener_callback(self, msg):
@@ -51,11 +51,11 @@ class ArmControl(Node):
         self.current_positions[4] = sanitize_input(pulse_array[4], 875, 125)
         
         # Send to hardware (using 0.1s duration for snappy keyboard response)
-        self.update_arm(10.0)
+        self.update_arm(1.0)
 
     def update_arm(self, duration):
         # board.bus_servo_set_position expects a list of tuples: [(id, pulse), (id, pulse)...]
-        targets = [(servo_id, pulse) for servo_id, pulse in self.current_positions.items()]
+        targets = [(servo_id+1, pulse) for servo_id, pulse in self.current_positions.items()]
         
         self.board.bus_servo_set_position(duration, targets)
         

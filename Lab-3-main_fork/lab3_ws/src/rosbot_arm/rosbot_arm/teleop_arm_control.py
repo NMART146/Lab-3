@@ -61,6 +61,10 @@ class TeleopArm(Node):
         self.publisher = self.create_publisher(ForwardMsg, 'forward_topic', 10)
         
         self.current_positions = [500, 750, 40, 350, 500]
+        firstMsg = ForwardMsg()
+        for i in range(len(self.current_positions)):
+                    firstMsg.pulse_array.append(self.current_positions[i])
+        self.publisher.publish(firstMsg)
 
     def publish_command(self, servo_id, direction):
         # Prevent index out of bounds on the 5-element array
@@ -72,8 +76,8 @@ class TeleopArm(Node):
         
         outMsg = ForwardMsg()
         # Ensure we assign the values into the pre-allocated array correctly
-        for i in range(5):
-            outMsg.pulse_array[i] = self.current_positions[i]
+        for i in range(len(self.current_positions)):
+            outMsg.pulse_array.append(self.current_positions[i])
             
         self.publisher.publish(outMsg)
 
