@@ -5,7 +5,6 @@ import json
 from rclpy.node import Node
 from ros_robot_controller.ros_robot_controller_sdk import Board
 from rosbot_msgs.msg import ForwardMsg
-from rosbot_msgs.msg import String
 # from rosbot_msgs.msg import GripMsg # Uncomment if needed later
 
 def sanitize_input(value, upper, lower):
@@ -22,7 +21,6 @@ class ArmControl(Node):
             self.listener_callback,
             10
         )
-        self.publisher = self.create_publisher(String,'servo_pos', 10)
         
         # Initialize the hardware board once
         self.board = Board()
@@ -57,9 +55,7 @@ class ArmControl(Node):
         if servo_id == 2:
             new_pulse = sanitize_input(new_pulse, 775, 125)
         elif servo_id == 3:
-            new_pulse = sanitize_input(new_pulse, 500, 30)
-        elif servo_id == 5:
-            new_pulse = sanitize_input(new_pulse, 875, 128)
+            new_pulse = sanitize_input(new_pulse, 500, 40)
         elif servo_id == 10:
             new_pulse = sanitize_input(new_pulse, 650, 0)
         else:
@@ -77,7 +73,6 @@ class ArmControl(Node):
         targets = [(servo_id, pulse) for servo_id, pulse in self.current_positions.items()]
         
         self.board.bus_servo_set_position(duration, targets)
-        self.publisher.publish(json.dumps(self.current_positions))
         
         # Optional: Log the position for debugging
         # for i in [1, 2, 3, 4, 5, 10]:
