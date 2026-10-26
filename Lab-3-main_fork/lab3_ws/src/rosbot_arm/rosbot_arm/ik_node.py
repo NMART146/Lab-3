@@ -5,98 +5,85 @@ from rosbot_msgs.msg import ForwardMsg
 
 import numpy as np
 
-
-##  Joint Links ##
-# l0 refers to the height of the arm base wrt base_link
-l0 = 0.05 + 0.0654868 + 0.0338648 + 0.0772047
+# Joint links
+l0 = 0.05 + 0.0654868 + 0.0338648 + 0.0772047  # arm base height wrt base_link
 l1 = 0.130
 l2 = 0.130
 l3 = 0.055
 tool_link = 0.117
+lengths = [l0, l1, l2, l3 + tool_link, 0.0]
 
-lengths = [l0, l1, l2, l3+tool_link, 0.0]
-coordinate = [0.0, 0.0, 0.0, 0.0, 0.0] #x,y,z,phi,gamma
-
-arm_ids = [1, 2, 3, 4, 5]
-
-# Only joint 2 is limited to protect the screen
+# Index 0..4 = joints 1..5
 min_pulses = [0, 125, 0, 0, 0]
 max_pulses = [1000, 775, 500, 1000, 1000]
 min_angles = [-120, -90, -120, -120, -120]
 max_angles = [120, 66, 0, 120, 120]
 
-#joint matrix
-joints_rad = np.array([[1,2,3,4,5],[0.0,0.0,0.0,0.0,0.0]]) #row1-joint id, row2-joint angle in radians (need to convert to degree and then pulse)
-joints = np.array([[1,2,3,4,5],[0,0,0,0,0]])
 
-# All joints operate in the range -120 to 120 with a pulse width range of 0 to 1000
+def angle_to_pulse(idx, angle_deg):
+    # np.interp clamps to the range ends, so out-of-limit angles saturate
+    return int(round(np.interp(angle_deg,
+                               [min_angles[idx], max_angles[idx]],
+                               [min_pulses[idx], max_pulses[idx]])))
 
-# TODO: Write helper scripts to convert from one to the other.
 
-def angle_to_pulse(joint_id, angle):
-    pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
-    angle_range = [min_angles[joint_id], max_angles[joint_id]]
-    pulse = int(round(np.interp(angle, angle_range, pulse_range)))
-    return pulse
+def pulse_to_angle(idx, pulse):
+    return float(np.interp(pulse,
+                           [min_pulses[idx], max_pulses[idx]],
+                           [min_angles[idx], max_angles[idx]]))
 
-def pulse_to_angle(joint_id, pulse):
-    pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
-    angle_range = [min_angles[joint_id], max_angles[joint_id]]
-    angle = np.interp(pulse, pulse_range, angle_range)
-    return angle
 
-def ik(coordinate):
-    coordinate[2] = coordinate[2] - lengths[0] + lengths[3] #adjust for base height
-    r = np.sqrt(coordinate[0]**2 + coordinate[1]**2 + coordinate[2]**2)
-    if r > (lengths[1] + lengths[2]) or r == 0:
-        get_logger().error("Target is out of reach. Please choose a closer target.")
-        return
-    else:
-        zeta = np.arccos((-(lengths[1]**2) - (lengths[2]**2) + r**2)/(-2*lengths[1]*lengths[2]))
-        joints_rad[1,0] = np.arcsin((lengths[2]*np.sin(zeta))/r)+np.arcsin(coordinate[2]/r) #shoulder hinge
-        joints_rad[1,1] = np.pi/2 - np.arctan2(coordinate[1], coordinate[0]) #shoulder yaw
-        joints_rad[1,2] = np.pi - zeta #elbow hinge
-        joints_rad[1,3] = joints_rad[1,0] - joints_rad[1,2] + coordinate[3] #wrist hinge
-        #joints_rad[1,4] will be set by openCV node. ignore for now ig
-        for i in range(5):
-            joints[1,i] = angle_to_pulse(joints_rad[0,i], np.rad2deg(joints_rad[1,i]))
-        return joints
+def ik(target):
+    """target = [x, y, z, phi, gamma]. Returns list of 5 pulses, or None if unreachable."""
+    x, y, z, phi, _gamma = target
+    z = z - lengths[0] + lengths[3]  # local copy; doesn't mutate caller's list
+
+    r = np.sqrt(x**2 + y**2 + z**2)
+    if r == 0 or r > (lengths[1] + lengths[2]):
+        return None
+
+    cos_zeta = (lengths[1]**2 + lengths[2]**2 - r**2) / (2 * lengths[1] * lengths[2])
+    zeta = np.arccos(np.clip(cos_zeta, -1.0, 1.0))
+
+    angles = np.zeros(5)
+    angles[0] = (np.arcsin(np.clip(lengths[2] * np.sin(zeta) / r, -1.0, 1.0))
+                 + np.arcsin(np.clip(z / r, -1.0, 1.0)))   # shoulder hinge
+    angles[1] = np.pi / 2 - np.arctan2(y, x)               # shoulder yaw
+    angles[2] = np.pi - zeta                               # elbow hinge
+    angles[3] = angles[0] - angles[2] + phi                # wrist hinge
+    angles[4] = 0.0                                        # set by OpenCV node later
+
+    return [angle_to_pulse(i, np.rad2deg(angles[i])) for i in range(5)]
 
 
 class IKNode(Node):
-    
     def __init__(self):
         super().__init__('ik_node')
-        #subscribe to coordinate topic (x,y,z,phi,gamma)
         self.subscription = self.create_subscription(
-                    Coordinate,
-                    'coordinate_topic',
-                    self.listener_callback,
-                    10
-                )
-        #publish to forward topic (servo_id, command_pulse)
+            Coordinate, 'coordinate_topic', self.listener_callback, 10)
         self.publisher_ = self.create_publisher(ForwardMsg, 'forward_topic', 10)
-        self.timer = self.create_timer(0.5, self.timer_callback)
-
-
-    def timer_callback(self):
-        msg = ForwardMsg()
-        msg.pulse_array = joints[1,:].tolist()
-        msg.pulse_array = ik(self.)
-        self.publisher_.publish(msg)
-
-            
-        
-    # TODO: Write inverse kinematics node
 
     def listener_callback(self, msg):
-        self.coordinate = [msg.x, msg.y, msg.z, msg.phi, msg.gamma]
+        pulses = ik([msg.x, msg.y, msg.z, msg.phi, msg.gamma])
+        if pulses is None:
+            self.get_logger().error("Target is out of reach. Please choose a closer target.")
+            return
+        out = ForwardMsg()
+        out.pulse_array = pulses
+        self.publisher_.publish(out)
+
 
 def main():
     rclpy.init()
-    ik_node = IKNode()
-    rclpy.spin(ik_node)
-    rclpy.shutdown()
+    node = IKNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
