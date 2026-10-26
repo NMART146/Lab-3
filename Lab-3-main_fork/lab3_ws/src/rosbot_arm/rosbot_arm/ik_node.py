@@ -48,7 +48,7 @@ def ik(target):
     angles = np.zeros(5)
     angles[0] = (np.arcsin(np.clip(lengths[2] * np.sin(zeta) / r, -1.0, 1.0))
                  + np.arcsin(np.clip(z / r, -1.0, 1.0)))   # shoulder hinge
-    angles[1] = np.pi / 2 - np.arctan2(y, x)               # shoulder yaw
+    angles[1] = np.arctan2(y, x)                           # shoulder yaw
     angles[2] = np.pi - zeta                               # elbow hinge
     angles[3] = angles[0] - angles[2] + phi                # wrist hinge
     angles[4] = 0.0                                        # set by OpenCV node later
