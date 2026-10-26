@@ -15,7 +15,6 @@ l3 = 0.055
 tool_link = 0.117
 
 lengths = [l0, l1, l2, l3+tool_link, 0.0]
-coordinate = [0.0, 0.0, 0.0, 0.0, 0.0] #x,y,z,phi,gamma
 
 arm_ids = [1, 2, 3, 4, 5]
 
@@ -64,6 +63,7 @@ def ik(coordinate):
 
 
 class IKNode(Node):
+    coordinate = [0.0, 0.0, 0.0, 0.0, 0.0] #x,y,z,phi,gamma
     def __init__(self):
         super().__init__('ik_node')
         #subscribe to coordinate topic (x,y,z,phi,gamma)
