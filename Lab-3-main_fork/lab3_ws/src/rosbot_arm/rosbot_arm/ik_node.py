@@ -15,7 +15,7 @@ l3 = 0.055
 tool_link = 0.117
 
 lengths = [l0, l1, l2, l3+tool_link, 0]
-
+coordinate = [0, 0, 0, 0, 0] #x,y,z,phi,gamma
 
 arm_ids = [1, 2, 3, 4, 5]
 
@@ -81,6 +81,7 @@ class IKNode(Node):
     def timer_callback(self):
         msg = ForwardMsg()
         msg.pulse_array = joints[1,:].tolist()
+        msg.pulse_array = self.ik(self.coordinate)
         self.publisher_.publish(msg)
 
             
@@ -88,7 +89,7 @@ class IKNode(Node):
     # TODO: Write inverse kinematics node
 
     def listener_callback(self, msg):
-        coordinate = [msg.x, msg.y, msg.z, msg.phi, msg.gamma]
+        self.coordinate = [msg.x, msg.y, msg.z, msg.phi, msg.gamma]
 
 def main():
     rclpy.init()
