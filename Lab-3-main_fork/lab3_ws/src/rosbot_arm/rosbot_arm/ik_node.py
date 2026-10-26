@@ -16,8 +16,8 @@ lengths = [l0, l1, l2, l3 + tool_link, 0.0]
 # Index 0..4 = joints 1..5
 min_pulses = [0, 125, 0, 0, 0]
 max_pulses = [1000, 775, 500, 1000, 1000]
-min_angles = [-120, -90, -120, -120, -120]
-max_angles = [120, 66, 0, 120, 120]
+min_angles = [-120, -66, 0, -120, -120]
+max_angles = [120, 90, 120, 120, 120]
 
 
 def angle_to_pulse(idx, angle_deg):
@@ -50,7 +50,7 @@ def ik(target):
     angles[1] = np.pi - (np.arcsin(np.clip(lengths[2] * np.sin(zeta) / r, -1.0, 1.0))
                  + np.arcsin(np.clip(z / r, -1.0, 1.0)))   # shoulder hinge
     angles[2] = np.pi - zeta                               # elbow hinge
-    angles[3] = np.pi - angles[0] - angles[2] + phi                # wrist hinge
+    angles[3] = np.pi - angles[1] - angles[2] + phi*np.pi/180                # wrist hinge
     angles[4] = 0.0                                        # set by OpenCV node later
 
     return [angle_to_pulse(i, ((angles[i])*180/np.pi)) for i in range(5)]
@@ -64,7 +64,7 @@ class IKNode(Node):
         self.publisher_ = self.create_publisher(ForwardMsg, 'forward_topic', 10)
 
     def listener_callback(self, msg):
-        pulses = ik([msg.x, msg.y, msg.z, msg.phi, msg.gamma])
+        pulses = ik([-(msg.x), msg.y, msg.z, msg.phi, msg.gamma])
         if pulses is None:
             self.get_logger().error("Target is out of reach. Please choose a closer target.")
             return
