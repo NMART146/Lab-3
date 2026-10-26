@@ -49,7 +49,7 @@ def ik(coordinate):
     coordinate[2] = coordinate[2] - lengths[0] + lengths[3] #adjust for base height
     r = np.sqrt(coordinate[0]**2 + coordinate[1]**2 + coordinate[2]**2)
     if r > (lengths[1] + lengths[2]) or r == 0:
-        self.get_logger().error("Target is out of reach. Please choose a closer target.")
+        get_logger().error("Target is out of reach. Please choose a closer target.")
         return
     else:
         zeta = np.arccos((-(lengths[1]**2) - (lengths[2]**2) + r**2)/(-2*lengths[1]*lengths[2]))
@@ -67,7 +67,6 @@ class IKNode(Node):
     
     def __init__(self):
         super().__init__('ik_node')
-        self.coordinate = coordinate
         #subscribe to coordinate topic (x,y,z,phi,gamma)
         self.subscription = self.create_subscription(
                     Coordinate,
@@ -83,7 +82,7 @@ class IKNode(Node):
     def timer_callback(self):
         msg = ForwardMsg()
         msg.pulse_array = joints[1,:].tolist()
-        msg.pulse_array = ik(self.coordinate)
+        msg.pulse_array = ik(self.)
         self.publisher_.publish(msg)
 
             
