@@ -64,7 +64,7 @@ class IKNode(Node):
         self.publisher_ = self.create_publisher(ForwardMsg, 'forward_topic', 10)
 
     def listener_callback(self, msg):
-        pulses = ik([-(msg.x), msg.y, msg.z, msg.phi, msg.gamma])
+        pulses = ik([msg.x, msg.y, msg.z, msg.phi, msg.gamma])
         if pulses is None:
             self.get_logger().error("Target is out of reach. Please choose a closer target.")
             return
