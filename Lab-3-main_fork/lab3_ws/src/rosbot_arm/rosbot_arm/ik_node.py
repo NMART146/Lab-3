@@ -35,7 +35,7 @@ def pulse_to_angle(idx, pulse):
 
 def ik(target):
     """target = [x, y, z, phi, gamma]. Returns list of 5 pulses, or None if unreachable."""
-    x, y, z, phi, _gamma = target
+    x, y, z, phi, gamma = target
     z = z - lengths[0] + lengths[3]  # local copy; doesn't mutate caller's list
 
     r = np.sqrt(x**2 + y**2 + z**2)
@@ -53,7 +53,7 @@ def ik(target):
     angles[3] = np.pi - angles[0] - angles[2] + phi                # wrist hinge
     angles[4] = 0.0                                        # set by OpenCV node later
 
-    return [angle_to_pulse(i, np.rad2deg(angles[i])) for i in range(5)]
+    return [angle_to_pulse(i, ((angles[i])*180/np.pi)) for i in range(5)]
 
 
 class IKNode(Node):
