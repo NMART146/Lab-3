@@ -81,7 +81,7 @@ class IKNode(Node):
     def timer_callback(self):
         msg = ForwardMsg()
         msg.pulse_array = joints[1,:].tolist()
-        msg.pulse_array = self.ik(self.coordinate)
+        msg.pulse_array = ik(self.coordinate)
         self.publisher_.publish(msg)
 
             
