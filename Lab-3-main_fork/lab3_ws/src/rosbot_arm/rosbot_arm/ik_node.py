@@ -36,7 +36,7 @@ joints = np.array([[1,2,3,4,5],[0,0,0,0,0]])
 def angle_to_pulse(joint_id, angle):
     pulse_range = [min_pulses[joint_id], max_pulses[joint_id]]
     angle_range = [min_angles[joint_id], max_angles[joint_id]]
-    pulse = np.interp(angle, angle_range, pulse_range)
+    pulse = int(round(np.interp(angle, angle_range, pulse_range)))
     return pulse
 
 def pulse_to_angle(joint_id, pulse):
