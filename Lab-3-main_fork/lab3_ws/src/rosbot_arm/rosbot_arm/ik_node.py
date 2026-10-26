@@ -14,8 +14,8 @@ l2 = 0.130
 l3 = 0.055
 tool_link = 0.117
 
-lengths = [l0, l1, l2, l3+tool_link, 0]
-coordinate = [0, 0, 0, 0, 0] #x,y,z,phi,gamma
+lengths = [l0, l1, l2, l3+tool_link, 0.0]
+coordinate = [0.0, 0.0, 0.0, 0.0, 0.0] #x,y,z,phi,gamma
 
 arm_ids = [1, 2, 3, 4, 5]
 
