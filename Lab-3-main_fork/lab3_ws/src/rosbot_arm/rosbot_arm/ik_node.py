@@ -43,12 +43,12 @@ def ik(target):
         return None
 
     
-    zeta = 2*np.arctan(np.sqrt((2*l1*l2-l1^2-l2^2+r^2)/(2*l1*l2+l1^2+l2^2-r^2)))
+    zeta = 2*np.arctan(np.sqrt((2*l1*l2-l1**2-l2**2+r**2)/(2*l1*l2+l1**2+l2**2-r**2)))
     alpha = np.arcsin(l2*np.sin(zeta)/r)
 
     angles = np.zeros(5)
     angles[0] = np.arctan2(y, x)                           # shoulder yaw
-    angles[1] = np.arctan(np.sqrt(x^2+y^2)/(z+tool_link))-alpha   # shoulder hinge
+    angles[1] = np.arctan(np.sqrt(x**2+y**2)/z)-alpha   # shoulder hinge
     angles[2] = np.pi - zeta                             # elbow hinge
     angles[3] = np.pi/2 + angles[1] + angles[2] + phi*np.pi/180                # wrist hinge
     angles[4] = 0.0                                        # set by OpenCV node later
@@ -65,7 +65,7 @@ class IKNode(Node):
 
     def listener_callback(self, msg):
         self.get_logger().info(f"got x={msg.x} y={msg.y} z={msg.z} phi={msg.phi}")
-        pulses = ik([-(msg.x), msg.y, msg.z, msg.phi, msg.gamma])
+        pulses = ik([msg.x, msg.y, msg.z, msg.phi, msg.gamma])
         if pulses is None:
             self.get_logger().error("Target is out of reach. Please choose a closer target.")
             return
