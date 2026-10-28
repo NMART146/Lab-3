@@ -42,15 +42,15 @@ def ik(target):
     if r == 0 or r > (lengths[1] + lengths[2]):
         return None
 
-    cos_zeta = (lengths[1]**2 + lengths[2]**2 - r**2) / (2 * lengths[1] * lengths[2])
-    zeta = np.arccos(np.clip(cos_zeta, -1.0, 1.0))
+    
+    zeta = 2*np.arctan(np.sqrt((2*l1*l2-l1^2-l2^2+r^2)/(2*l1*l2+l1^2+l2^2-r^2)))
+    alpha = np.arcsin(l2*np.sin(zeta)/r)
 
     angles = np.zeros(5)
     angles[0] = np.arctan2(y, x)                           # shoulder yaw
-    angles[1] = np.pi - (np.arcsin(np.clip(lengths[2] * np.sin(zeta) / r, -1.0, 1.0))
-                 + np.arcsin(np.clip(z / r, -1.0, 1.0)))   # shoulder hinge
-    angles[2] = np.pi - zeta                               # elbow hinge
-    angles[3] = np.pi - angles[1] - angles[2] + phi*np.pi/180                # wrist hinge
+    angles[1] = np.arctan(np.sqrt(x^2+y^2)/(z+tool_link))-alpha   # shoulder hinge
+    angles[2] = np.pi - zeta                             # elbow hinge
+    angles[3] = np.pi/2 + angles[1] + angles[2] + phi*np.pi/180                # wrist hinge
     angles[4] = 0.0                                        # set by OpenCV node later
 
     return [angle_to_pulse(i, ((angles[i])*180/np.pi)) for i in range(5)]
