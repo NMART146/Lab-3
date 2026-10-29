@@ -36,7 +36,7 @@ def pulse_to_angle(idx, pulse):
 def ik(target):
     """target = [x, y, z, phi, gamma]. Returns list of 5 pulses, or None if unreachable."""
     x, y, z, phi, gamma = target
-    z = z - lengths[0] + lengths[3]  # local copy; doesn't mutate caller's list
+      # local copy; doesn't mutate caller's list
 
     r = np.sqrt(x**2 + y**2 + z**2)
     if r == 0 or r > (lengths[1] + lengths[2]):
