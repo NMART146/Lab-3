@@ -1,0 +1,6 @@
+msg/Coordinate.idl
+msg/Coordinate.msg
+msg/ForwardMsg.idl
+msg/ForwardMsg.msg
+msg/GripMsg.idl
+msg/GripMsg.msg

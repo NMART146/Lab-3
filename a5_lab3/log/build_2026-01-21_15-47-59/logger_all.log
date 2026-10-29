@@ -1,0 +1,234 @@
+[0.255s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--symlink-install'][0m
+[0.256s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffb13780a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffb152de40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffb152de40>>)[0m
+[0.647s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.648s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/ubuntu/ros2_ws/a5_lab3'
+[0.648s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.649s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.700s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.700s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.700s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.700s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.700s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['ignore', 'ignore_ament_install']
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'ignore'
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'ignore_ament_install'
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['colcon_pkg']
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'colcon_pkg'
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['colcon_meta']
+[0.701s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'colcon_meta'
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['ros']
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'ros'
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['cmake', 'python']
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'cmake'
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'python'
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extensions ['python_setup_py']
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(Lab3) by extension 'python_setup_py'
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.702s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'ignore'
+[0.703s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'ignore_ament_install'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['colcon_pkg']
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'colcon_pkg'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['colcon_meta']
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'colcon_meta'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['ros']
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'ros'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['cmake', 'python']
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'cmake'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'python'
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extensions ['python_setup_py']
+[0.704s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws) by extension 'python_setup_py'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'ignore'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'ignore_ament_install'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['colcon_pkg']
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'colcon_pkg'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['colcon_meta']
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'colcon_meta'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['ros']
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'ros'
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['cmake', 'python']
+[0.705s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'cmake'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'python'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extensions ['python_setup_py']
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src) by extension 'python_setup_py'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extensions ['ignore', 'ignore_ament_install']
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extension 'ignore'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extension 'ignore_ament_install'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extensions ['colcon_pkg']
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extension 'colcon_pkg'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extensions ['colcon_meta']
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extension 'colcon_meta'
+[0.706s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extensions ['ros']
+[0.707s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_arm) by extension 'ros'
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'lab3_ws/src/rosbot_arm' with type 'ros.ament_python' and name 'rosbot_arm'[0m
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extension 'ignore'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extension 'ignore_ament_install'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extensions ['colcon_pkg']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extension 'colcon_pkg'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extensions ['colcon_meta']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extension 'colcon_meta'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extensions ['ros']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(lab3_ws/src/rosbot_msgs) by extension 'ros'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'lab3_ws/src/rosbot_msgs' with type 'ros.ament_cmake' and name 'rosbot_msgs'[0m
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.714s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.714s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.715s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.715s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.715s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.748s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.748s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.754s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 2 installed packages in /home/ubuntu/ros2_ws/a5_lab3/install[0m
+[0.755s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 3 installed packages in /home/ubuntu/third_party/orbbec_ws/install[0m
+[0.756s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 16 installed packages in /home/ubuntu/third_party/third_party_ws/install[0m
+[0.758s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 15 installed packages in /home/ubuntu/ros2_ws/install[0m
+[0.761s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 368 installed packages in /opt/ros/humble[0m
+[0.766s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.853s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_args' from command line to 'None'
+[0.853s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_target' from command line to 'None'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_clean_first' from command line to 'False'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'cmake_force_configure' from command line to 'False'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'ament_cmake_args' from command line to 'None'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_arm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.854s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'rosbot_arm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm', 'merge_install': False, 'path': '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_arm', 'symlink_install': True, 'test_result_base': None}[0m
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_target' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'rosbot_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.855s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'rosbot_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs', 'merge_install': False, 'path': '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs', 'symlink_install': True, 'test_result_base': None}[0m
+[0.855s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.857s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.858s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_arm' with build type 'ament_python'
+[0.858s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_arm', 'ament_prefix_path')
+[0.863s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.864s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/ament_prefix_path.ps1'
+[0.865s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/ament_prefix_path.dsv'
+[0.866s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/ament_prefix_path.sh'
+[0.867s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.868s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.880s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs' with build type 'ament_cmake'
+[0.881s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs'
+[0.881s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.881s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.527s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_arm'
+[1.528s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.528s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.550s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs:/home/ubuntu/third_party/orbbec_ws/install/orbbec_description:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera_msgs:/home/ubuntu/third_party/third_party_ws/install/ydlidar_ros2_driver:/home/ubuntu/third_party/third_party_ws/install/web_video_server:/home/ubuntu/third_party/third_party_ws/install/teb_local_planner:/home/ubuntu/third_party/third_party_ws/install/teb_msgs:/home/ubuntu/third_party/third_party_ws/install/sllidar_ros2:/home/ubuntu/third_party/third_party_ws/install/rf2o_laser_odometry:/home/ubuntu/third_party/third_party_ws/install/ldlidar_stl_ros2:/home/ubuntu/third_party/third_party_ws/install/laser_filters:/home/ubuntu/third_party/third_party_ws/install/imu_calib:/home/ubuntu/third_party/third_party_ws/install/image_geometry:/home/ubuntu/third_party/third_party_ws/install/costmap_converter:/home/ubuntu/third_party/third_party_ws/install/cv_bridge:/home/ubuntu/third_party/third_party_ws/install/costmap_converter_msgs:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm:/home/ubuntu/ros2_ws/install/servo_controller:/home/ubuntu/ros2_ws/install/sdk:/home/ubuntu/ros2_ws/install/ros_robot_controller:/home/ubuntu/ros2_ws/install/peripherals:/home/ubuntu/ros2_ws/install/kinematics:/home/ubuntu/ros2_ws/install/jetrover_description:/home/ubuntu/ros2_ws/install/controller:/home/ubuntu/ros2_ws/install/calibration:/home/ubuntu/ros2_ws/install/bringup:/opt/ros/humble:/home/ubuntu/third_party/third_party_ws/install/async_web_server_cpp:/home/ubuntu/third_party/third_party_ws/install/ascamera_listener:/home/ubuntu/third_party/third_party_ws/install/apriltag_msgs:/home/ubuntu/ros2_ws/install/servo_controller_msgs:/home/ubuntu/ros2_ws/install/ros_robot_controller_msgs:/home/ubuntu/ros2_ws/install/laser_filters:/home/ubuntu/ros2_ws/install/kinematics_msgs:/home/ubuntu/ros2_ws/install/interfaces:/home/ubuntu/ros2_ws/install/imu_calib /usr/bin/cmake --build /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs -- -j6 -l6[0m
+[2.295s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs:/home/ubuntu/third_party/orbbec_ws/install/orbbec_description:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera_msgs:/home/ubuntu/third_party/third_party_ws/install/ydlidar_ros2_driver:/home/ubuntu/third_party/third_party_ws/install/web_video_server:/home/ubuntu/third_party/third_party_ws/install/teb_local_planner:/home/ubuntu/third_party/third_party_ws/install/teb_msgs:/home/ubuntu/third_party/third_party_ws/install/sllidar_ros2:/home/ubuntu/third_party/third_party_ws/install/rf2o_laser_odometry:/home/ubuntu/third_party/third_party_ws/install/ldlidar_stl_ros2:/home/ubuntu/third_party/third_party_ws/install/laser_filters:/home/ubuntu/third_party/third_party_ws/install/imu_calib:/home/ubuntu/third_party/third_party_ws/install/image_geometry:/home/ubuntu/third_party/third_party_ws/install/costmap_converter:/home/ubuntu/third_party/third_party_ws/install/cv_bridge:/home/ubuntu/third_party/third_party_ws/install/costmap_converter_msgs:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm:/home/ubuntu/ros2_ws/install/servo_controller:/home/ubuntu/ros2_ws/install/sdk:/home/ubuntu/ros2_ws/install/ros_robot_controller:/home/ubuntu/ros2_ws/install/peripherals:/home/ubuntu/ros2_ws/install/kinematics:/home/ubuntu/ros2_ws/install/jetrover_description:/home/ubuntu/ros2_ws/install/controller:/home/ubuntu/ros2_ws/install/calibration:/home/ubuntu/ros2_ws/install/bringup:/opt/ros/humble:/home/ubuntu/third_party/third_party_ws/install/async_web_server_cpp:/home/ubuntu/third_party/third_party_ws/install/ascamera_listener:/home/ubuntu/third_party/third_party_ws/install/apriltag_msgs:/home/ubuntu/ros2_ws/install/servo_controller_msgs:/home/ubuntu/ros2_ws/install/ros_robot_controller_msgs:/home/ubuntu/ros2_ws/install/laser_filters:/home/ubuntu/ros2_ws/install/kinematics_msgs:/home/ubuntu/ros2_ws/install/interfaces:/home/ubuntu/ros2_ws/install/imu_calib /usr/bin/cmake --build /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs -- -j6 -l6[0m
+[2.305s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs:/home/ubuntu/third_party/orbbec_ws/install/orbbec_description:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera_msgs:/home/ubuntu/third_party/third_party_ws/install/ydlidar_ros2_driver:/home/ubuntu/third_party/third_party_ws/install/web_video_server:/home/ubuntu/third_party/third_party_ws/install/teb_local_planner:/home/ubuntu/third_party/third_party_ws/install/teb_msgs:/home/ubuntu/third_party/third_party_ws/install/sllidar_ros2:/home/ubuntu/third_party/third_party_ws/install/rf2o_laser_odometry:/home/ubuntu/third_party/third_party_ws/install/ldlidar_stl_ros2:/home/ubuntu/third_party/third_party_ws/install/laser_filters:/home/ubuntu/third_party/third_party_ws/install/imu_calib:/home/ubuntu/third_party/third_party_ws/install/image_geometry:/home/ubuntu/third_party/third_party_ws/install/costmap_converter:/home/ubuntu/third_party/third_party_ws/install/cv_bridge:/home/ubuntu/third_party/third_party_ws/install/costmap_converter_msgs:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm:/home/ubuntu/ros2_ws/install/servo_controller:/home/ubuntu/ros2_ws/install/sdk:/home/ubuntu/ros2_ws/install/ros_robot_controller:/home/ubuntu/ros2_ws/install/peripherals:/home/ubuntu/ros2_ws/install/kinematics:/home/ubuntu/ros2_ws/install/jetrover_description:/home/ubuntu/ros2_ws/install/controller:/home/ubuntu/ros2_ws/install/calibration:/home/ubuntu/ros2_ws/install/bringup:/opt/ros/humble:/home/ubuntu/third_party/third_party_ws/install/async_web_server_cpp:/home/ubuntu/third_party/third_party_ws/install/ascamera_listener:/home/ubuntu/third_party/third_party_ws/install/apriltag_msgs:/home/ubuntu/ros2_ws/install/servo_controller_msgs:/home/ubuntu/ros2_ws/install/ros_robot_controller_msgs:/home/ubuntu/ros2_ws/install/laser_filters:/home/ubuntu/ros2_ws/install/kinematics_msgs:/home/ubuntu/ros2_ws/install/interfaces:/home/ubuntu/ros2_ws/install/imu_calib /usr/bin/cmake --install /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs[0m
+[2.370s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm': PYTHONPATH=/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/build --no-deps symlink_data[0m
+[2.457s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(rosbot_msgs)
+[2.459s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs:/home/ubuntu/third_party/orbbec_ws/install/orbbec_description:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera:/home/ubuntu/third_party/orbbec_ws/install/orbbec_camera_msgs:/home/ubuntu/third_party/third_party_ws/install/ydlidar_ros2_driver:/home/ubuntu/third_party/third_party_ws/install/web_video_server:/home/ubuntu/third_party/third_party_ws/install/teb_local_planner:/home/ubuntu/third_party/third_party_ws/install/teb_msgs:/home/ubuntu/third_party/third_party_ws/install/sllidar_ros2:/home/ubuntu/third_party/third_party_ws/install/rf2o_laser_odometry:/home/ubuntu/third_party/third_party_ws/install/ldlidar_stl_ros2:/home/ubuntu/third_party/third_party_ws/install/laser_filters:/home/ubuntu/third_party/third_party_ws/install/imu_calib:/home/ubuntu/third_party/third_party_ws/install/image_geometry:/home/ubuntu/third_party/third_party_ws/install/costmap_converter:/home/ubuntu/third_party/third_party_ws/install/cv_bridge:/home/ubuntu/third_party/third_party_ws/install/costmap_converter_msgs:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm:/home/ubuntu/ros2_ws/install/servo_controller:/home/ubuntu/ros2_ws/install/sdk:/home/ubuntu/ros2_ws/install/ros_robot_controller:/home/ubuntu/ros2_ws/install/peripherals:/home/ubuntu/ros2_ws/install/kinematics:/home/ubuntu/ros2_ws/install/jetrover_description:/home/ubuntu/ros2_ws/install/controller:/home/ubuntu/ros2_ws/install/calibration:/home/ubuntu/ros2_ws/install/bringup:/opt/ros/humble:/home/ubuntu/third_party/third_party_ws/install/async_web_server_cpp:/home/ubuntu/third_party/third_party_ws/install/ascamera_listener:/home/ubuntu/third_party/third_party_ws/install/apriltag_msgs:/home/ubuntu/ros2_ws/install/servo_controller_msgs:/home/ubuntu/ros2_ws/install/ros_robot_controller_msgs:/home/ubuntu/ros2_ws/install/laser_filters:/home/ubuntu/ros2_ws/install/kinematics_msgs:/home/ubuntu/ros2_ws/install/interfaces:/home/ubuntu/ros2_ws/install/imu_calib /usr/bin/cmake --install /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs[0m
+[2.471s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs' for CMake module files
+[2.473s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs' for CMake config files
+[2.475s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_msgs', 'cmake_prefix_path')
+[2.476s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.ps1'
+[2.478s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.dsv'
+[2.479s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.sh'
+[2.482s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib'
+[2.482s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_msgs', 'ld_library_path_lib')
+[2.483s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.ps1'
+[2.484s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.dsv'
+[2.485s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.sh'
+[2.486s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/bin'
+[2.487s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib/pkgconfig/rosbot_msgs.pc'
+[2.488s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib/python3.10/site-packages'
+[2.489s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/bin'
+[2.490s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.ps1'
+[2.493s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.dsv'
+[2.495s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.sh'
+[2.497s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.bash'
+[2.499s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.zsh'
+[2.501s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/colcon-core/packages/rosbot_msgs)
+[2.503s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(rosbot_msgs)
+[2.503s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs' for CMake module files
+[2.505s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs' for CMake config files
+[2.507s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_msgs', 'cmake_prefix_path')
+[2.507s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.ps1'
+[2.509s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.dsv'
+[2.509s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/cmake_prefix_path.sh'
+[2.511s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib'
+[2.511s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_msgs', 'ld_library_path_lib')
+[2.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.ps1'
+[2.512s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.dsv'
+[2.513s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/hook/ld_library_path_lib.sh'
+[2.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/bin'
+[2.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib/pkgconfig/rosbot_msgs.pc'
+[2.515s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/lib/python3.10/site-packages'
+[2.516s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/bin'
+[2.517s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.ps1'
+[2.518s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.dsv'
+[2.519s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.sh'
+[2.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.bash'
+[2.521s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/rosbot_msgs/package.zsh'
+[2.522s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_msgs/share/colcon-core/packages/rosbot_msgs)
+[3.503s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_arm', 'pythonpath_develop')
+[3.504s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/share/rosbot_arm/hook/pythonpath_develop.ps1'
+[3.505s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/build --no-deps symlink_data[0m
+[3.507s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/share/rosbot_arm/hook/pythonpath_develop.dsv'
+[3.509s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/share/rosbot_arm/hook/pythonpath_develop.sh'
+[3.511s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm' for CMake module files
+[3.512s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm' for CMake config files
+[3.514s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib'
+[3.515s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/bin'
+[3.515s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/pkgconfig/rosbot_arm.pc'
+[3.516s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages'
+[3.516s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('rosbot_arm', 'pythonpath')
+[3.517s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/pythonpath.ps1'
+[3.518s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/pythonpath.dsv'
+[3.520s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/hook/pythonpath.sh'
+[3.522s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/bin'
+[3.523s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(rosbot_arm)
+[3.524s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/package.ps1'
+[3.527s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/package.dsv'
+[3.529s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/package.sh'
+[3.530s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/package.bash'
+[3.532s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/package.zsh'
+[3.533s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/colcon-core/packages/rosbot_arm)
+[3.534s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[3.535s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[3.536s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[3.536s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[3.559s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.559s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.560s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[3.600s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[3.601s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/a5_lab3/install/local_setup.ps1'
+[3.605s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ubuntu/ros2_ws/a5_lab3/install/_local_setup_util_ps1.py'
+[3.609s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/a5_lab3/install/setup.ps1'
+[3.619s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/a5_lab3/install/local_setup.sh'
+[3.621s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/ubuntu/ros2_ws/a5_lab3/install/_local_setup_util_sh.py'
+[3.623s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/a5_lab3/install/setup.sh'
+[3.633s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/a5_lab3/install/local_setup.bash'
+[3.635s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/a5_lab3/install/setup.bash'
+[3.644s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/ubuntu/ros2_ws/a5_lab3/install/local_setup.zsh'
+[3.645s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/ubuntu/ros2_ws/a5_lab3/install/setup.zsh'

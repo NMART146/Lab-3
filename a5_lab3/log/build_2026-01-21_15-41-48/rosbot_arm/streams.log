@@ -1,0 +1,29 @@
+[1.511s] Invoking command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm': PYTHONPATH=/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/build --no-deps symlink_data
+[2.132s] running develop
+[2.574s] running egg_info
+[2.575s] creating rosbot_arm.egg-info
+[2.575s] writing rosbot_arm.egg-info/PKG-INFO
+[2.575s] writing dependency_links to rosbot_arm.egg-info/dependency_links.txt
+[2.576s] writing entry points to rosbot_arm.egg-info/entry_points.txt
+[2.576s] writing requirements to rosbot_arm.egg-info/requires.txt
+[2.576s] writing top-level names to rosbot_arm.egg-info/top_level.txt
+[2.577s] writing manifest file 'rosbot_arm.egg-info/SOURCES.txt'
+[2.580s] reading manifest file 'rosbot_arm.egg-info/SOURCES.txt'
+[2.581s] writing manifest file 'rosbot_arm.egg-info/SOURCES.txt'
+[2.585s] running build_ext
+[2.586s] Creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages/rosbot-arm.egg-link (link to .)
+[2.587s] Installing arm_control script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+[2.588s] Installing arm_test script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+[2.588s] Installing ik_node script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+[2.588s] Installing teleop_arm_control script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+[2.588s] 
+[2.589s] Installed /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm
+[2.589s] running symlink_data
+[2.589s] creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/ament_index
+[2.589s] creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/ament_index/resource_index
+[2.589s] creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/ament_index/resource_index/packages
+[2.589s] symbolically linking /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/resource/rosbot_arm -> /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/ament_index/resource_index/packages
+[2.590s] symbolically linking /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/package.xml -> /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm
+[2.590s] creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/launch
+[2.590s] symbolically linking /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/launch/arm_launch.py -> /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/share/rosbot_arm/launch
+[2.690s] Invoked command in '/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm' returned '0': PYTHONPATH=/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm/build --no-deps symlink_data

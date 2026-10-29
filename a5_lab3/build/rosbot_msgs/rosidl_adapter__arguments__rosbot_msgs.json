@@ -1,0 +1,8 @@
+{
+  "package_name": "rosbot_msgs",
+  "non_idl_tuples": [
+    "/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs:msg/GripMsg.msg",
+    "/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs:msg/ForwardMsg.msg",
+    "/home/ubuntu/ros2_ws/a5_lab3/lab3_ws/src/rosbot_msgs:msg/Coordinate.msg"
+  ]
+}

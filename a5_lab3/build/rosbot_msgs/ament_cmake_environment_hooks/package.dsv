@@ -1,0 +1,4 @@
+source;share/rosbot_msgs/local_setup.bash
+source;share/rosbot_msgs/local_setup.dsv
+source;share/rosbot_msgs/local_setup.sh
+source;share/rosbot_msgs/local_setup.zsh

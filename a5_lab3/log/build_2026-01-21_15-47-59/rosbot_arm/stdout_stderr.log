@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing rosbot_arm.egg-info/PKG-INFO
+writing dependency_links to rosbot_arm.egg-info/dependency_links.txt
+writing entry points to rosbot_arm.egg-info/entry_points.txt
+writing requirements to rosbot_arm.egg-info/requires.txt
+writing top-level names to rosbot_arm.egg-info/top_level.txt
+reading manifest file 'rosbot_arm.egg-info/SOURCES.txt'
+writing manifest file 'rosbot_arm.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/python3.10/site-packages/rosbot-arm.egg-link (link to .)
+Installing arm_control script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+Installing arm_test script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+Installing ik_node script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+Installing teleop_arm_control script to /home/ubuntu/ros2_ws/a5_lab3/install/rosbot_arm/lib/rosbot_arm
+
+Installed /home/ubuntu/ros2_ws/a5_lab3/build/rosbot_arm
+running symlink_data

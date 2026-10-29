@@ -1,0 +1,10 @@
+setup.py
+rosbot_msgs/__init__.py
+rosbot_msgs.egg-info/PKG-INFO
+rosbot_msgs.egg-info/SOURCES.txt
+rosbot_msgs.egg-info/dependency_links.txt
+rosbot_msgs.egg-info/top_level.txt
+rosbot_msgs/msg/__init__.py
+rosbot_msgs/msg/_coordinate.py
+rosbot_msgs/msg/_forward_msg.py
+rosbot_msgs/msg/_grip_msg.py

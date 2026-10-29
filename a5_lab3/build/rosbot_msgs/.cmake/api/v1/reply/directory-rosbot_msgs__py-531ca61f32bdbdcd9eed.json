@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "rosbot_msgs__py",
+		"source" : "/home/ubuntu/ros2_ws/a5_lab3/build/rosbot_msgs/rosbot_msgs__py"
+	}
+}
